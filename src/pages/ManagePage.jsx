@@ -42,8 +42,8 @@ export default function ManagePage({ catalog, state, setState }) {
       className="btn"
       onClick={() => setFilter(id)}
       style={{
-        background: filter === id ? "#242424" : "#202020",
-        borderColor: filter === id ? "#3a3a3a" : "var(--border)",
+        background: filter === id ? "#6D248C" : "#202020",
+        borderColor: filter === id ? "#6D248C" : "var(--border)",
       }}
     >
       {label}
