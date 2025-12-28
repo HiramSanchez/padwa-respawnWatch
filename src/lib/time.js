@@ -9,6 +9,13 @@ export function msUntilReady(lastKillAtIso, respawnMinMinutes) {
   return readyAt - Date.now();
 }
 
+export function msUntilRealReady(lastKillAtIso, respawnMaxMinutes) {
+  if (!lastKillAtIso) return 0; // If never killed -> READY
+  const last = new Date(lastKillAtIso).getTime();
+  const readyAt = last + respawnMaxMinutes * 60 * 1000;
+  return readyAt - Date.now();
+}
+
 export function formatHMS(ms) {
   const clamped = Math.max(0, ms);
   const totalSeconds = Math.floor(clamped / 1000);

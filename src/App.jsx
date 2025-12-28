@@ -40,10 +40,26 @@ export default function App() {
       <div className="panel">
         <TopBar
           title={title}
-          right={<Tabs active={tab} onChange={setTab} />}
-        />
+          right={
+            <div className="row" style={{ gap: 8 }}>
+              <button
+                className="btn"
+                onClick={() =>
+                  setState((prev) => ({
+                    ...prev,
+                    ui: { ...(prev.ui ?? {}), compact: !prev.ui?.compact },
+                  }))
+                }
+                title="Toggle compact mode"
+              >
+                {state.ui?.compact ? "Compact: ON" : "Compact: OFF"}
+              </button>
 
-        {tab === "manage" ? (
+              <Tabs active={tab} onChange={setTab} />
+            </div>
+          }
+        />
+        {tab === "settings" ? (
           <ManagePage catalog={catalog} state={state} setState={setState} />
         ) : (
           <TrackerPage
@@ -51,6 +67,7 @@ export default function App() {
             state={state}
             setState={setState}
             type={tab} // "mvp" or "miniboss"
+            compact={state.ui?.compact ?? false}
           />
         )}
       </div>

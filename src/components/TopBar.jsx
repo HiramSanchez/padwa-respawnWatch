@@ -9,7 +9,7 @@ export default function TopBar({ title, right }) {
       {/* Row 1: App name */}
       <div className="row space">
         <div className="badge" 
-             style={{ color: "#ffffff" }}>Respawn Watch</div>
+             style={{ color: "var(--text)" }}>Respawn Watch</div>
         <div />
       </div>
 
