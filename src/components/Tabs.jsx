@@ -16,7 +16,7 @@ export default function Tabs({ active, onChange }) {
     <div className="row" style={{ gap: 8 }}>
       <Tab id="mvp" label="MVP" />
       <Tab id="miniboss" label="MiniBoss" />
-      <Tab id="manage" label="Manage" />
+      <Tab id="settings" label="Settings" />
     </div>
   );
 }
