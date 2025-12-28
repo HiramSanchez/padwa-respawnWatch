@@ -12,6 +12,12 @@
         "route": "Go Glast Heim, center top portal",
         "respawnMinMinutes": 60,
         "respawnMaxMinutes": 90
+      },
+      {
+        "mapName": "tur_dun03",
+        "route": "Go tur dungeon, and follow the maps",
+        "respawnMinMinutes": 60,
+        "respawnMaxMinutes": 90
       }
     ]
   },
