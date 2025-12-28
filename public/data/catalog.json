@@ -1,0 +1,114 @@
+[
+  { 
+    "mobId": "chimera",
+    "name": "Chimera",
+    "imgTag": "chimera",
+    "type": "miniboss",
+    "weakness": "Water",
+    "drops": ["Citrin"],
+    "maps": [
+      {
+        "mapName": "gl_cas02",
+        "route": "Go Glast Heim, center top portal",
+        "respawnMinMinutes": 60,
+        "respawnMaxMinutes": 90
+      }
+    ]
+  },
+  {
+    "mobId": "tao_gunka",
+    "name": "Tao Gunka",
+    "imgTag": "taoGunka",
+    "type": "mvp",
+    "weakness": null,
+    "drops": ["Tao Gunka Card"],
+    "maps": [
+      {
+        "mapName": "beach_dun",
+        "route": "Go Comodo, left",
+        "respawnMinMinutes": 300,
+        "respawnMaxMinutes": 310
+      }
+    ]
+  },
+  {
+    "mobId": "turtle_general",
+    "name": "Turtle General",
+    "imgTag": "turtleGeneral",
+    "type": "mvp",
+    "weakness": "Fire",
+    "drops": ["Turtle General Card"],
+    "maps": [
+      {
+        "mapName": "tur_dun04",
+        "route": "Follow the maps from tur dungeon",
+        "respawnMinMinutes": 60,
+        "respawnMaxMinutes": 70
+      }
+    ]
+  },
+  {
+    "mobId": "mayaPurple",
+    "name": "Maya Purple",
+    "imgTag": "mayaPurple",
+    "type": "mvp",
+    "weakness": "Fire",
+    "drops": ["Maya Purple Card"],
+    "maps": [
+      {
+        "mapName": "anthell01",
+        "route": "Go to Anthell",
+        "respawnMinMinutes": 120,
+        "respawnMaxMinutes": 180
+      }
+    ]
+  },
+  {
+    "mobId": "beelzebub",
+    "name": "Beelzebub",
+    "imgTag": "beelzebub",
+    "type": "mvp",
+    "weakness": "Ghost",
+    "drops": ["Beelzebub Card"],
+    "maps": [
+      {
+        "mapName": "abbey03",
+        "route": "Cursed nameless island, center, right, top",
+        "respawnMinMinutes": 720,
+        "respawnMaxMinutes": 730
+      }
+    ]
+  },
+  {
+    "mobId": "biolabMvp",
+    "name": "Biolab MVP",
+    "imgTag": "biolabMvp",
+    "type": "mvp",
+    "weakness": null,
+    "drops": ["Biolab MVP Cards"],
+    "maps": [
+      {
+        "mapName": "lhz_dun03",
+        "route": "Go Biolab, bottom, center",
+        "respawnMinMinutes": 100,
+        "respawnMaxMinutes": 130
+      }
+    ]
+  },
+  {
+    "mobId": "valkyrieRandgris",
+    "name": "Valkyrie Randgris",
+    "imgTag": "valkyrieRandgris",
+    "type": "mvp",
+    "weakness": "Shadow",
+    "drops": ["Randgris Card"],
+    "maps": [
+      {
+        "mapName": "odin_tem03",
+        "route": "Go odin temple, right, up-right",
+        "respawnMinMinutes": 480,
+        "respawnMaxMinutes": 490
+      }
+    ]
+  }
+]

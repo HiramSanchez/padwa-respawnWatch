@@ -1,0 +1,110 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b0b0b;
+  --panel: #121212;
+  --card: #1a1a1a;
+  --muted: #a8a8a8;
+  --text: #f2f2f2;
+  --border: #2a2a2a;
+  --ready: #2bd576;
+  --warn: #f2c94c;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+a { color: inherit; }
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 14px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.row { display: flex; gap: 10px; align-items: center; }
+.space { justify-content: space-between; }
+.muted { color: var(--muted); }
+
+.btn {
+  background: #202020;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:hover { border-color: #3a3a3a; }
+.btn.primary { border-color: #3a3a3a; background: #242424; }
+
+.input {
+  width: 100%;
+  background: #101010;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 9px 10px;
+  border-radius: 10px;
+}
+
+.badge {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.sectionTitle {
+  margin: 0;
+  padding: 12px 12px 8px;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.list { padding: 0 12px 12px; display: grid; gap: 10px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.card.ready {
+  border-color: rgba(43, 213, 118, .45);
+  box-shadow: 0 0 0 1px rgba(43, 213, 118, .15) inset;
+}
+
+.small { font-size: 12px; }
+.h1 { font-size: 14px; font-weight: 700; margin: 0; }
+.h2 { font-size: 12px; margin: 0; color: var(--muted); }
+
+.timer {
+  font-variant-numeric: tabular-nums;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.hr { height: 1px; background: var(--border); margin: 12px 0; }
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.switch input { transform: scale(1.1); }
