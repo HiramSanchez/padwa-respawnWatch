@@ -1,16 +1,96 @@
-# React + Vite
+# **Respawn Watch**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-18-skyblue)]()
+ &emsp;
+[![Vite](https://img.shields.io/badge/Vite-5.0.12-gold)]()  
 
-Currently, two official plugins are available:
+## 📁 **Description**
+Respawn Watch is a lightweight, local-first tracking tool for MMORPG farming.  
+It helps you keep track of mob respawn windows (min / max), prioritize targets, and reduce mental load while playing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+No backend. No database server. Just React, local data, and real-time timers.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Purpose
 
-## Expanding the ESLint configuration
+Many MMORPG mobs (MVPs, MiniBosses, rares) respawn within a **time window**, not an exact time. Respawn Watch allows you to:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Track **minimum and maximum respawn times**
+- Know when a mob is **possibly up** vs **guaranteed up**
+- Focus only on the mobs you are farming today
+
+## 📂 **Table of Contents**
+- [Tech Stack](#tech-stack)  
+- [Features](#features)  
+- [Screens](#screens)  
+- [Project Structure](#project-structure)
+- [Contact](#contact)
+
+## **Tech Stack**
+
+- **React**
+- **Vite**
+- **JavaScript (ES6+)**
+
+## **Features**
+
+### 🧠 Smart Respawn Logic
+Each spawn has:
+- **Min Time respawn** → *Possible spawn* (yellow)
+- **Max Time respawn** → *Confirmed spawn* (green)
+
+Statuses:
+- **Cooldown** → normal card
+- **Possible** → yellow border
+- **Ready** → green border
+
+Timers are recalculated automatically even after restarting the app.
+
+### 🗃️ Fake Database (Local JSON)
+- All mobs live in a local `catalog.json`. Easy to edit and extend over time
+
+### 💾 Persistent State
+- Kill times and UI settings are stored in `localStorage`, so closing and reopening the app keeps all progress intact
+
+### 🎮 Compact Mode (Farm Mode)
+- Toggle compact mode for intensive farming sessions
+
+### ⚙️ Settings Tab (Mob-Level Control)
+- Quickly Enable / disable only what you are farming today
+
+## **Screens**
+
+## **Project Structure**
+
+```text
+respawn-watch/
+├─ public/
+│  ├─ data/
+│  │  └─ catalog.json       # Fake DB
+│  └─ mobs/                 # Mob GIFs or IMG
+│
+├─ src/
+│  ├─ components/
+│  │  ├─ MobCard.jsx
+│  │  ├─ Tabs.jsx
+│  │  └─ TopBar.jsx
+│  │
+│  ├─ pages/
+│  │  ├─ TrackerPage.jsx    # MVP / MiniBoss tracker
+│  │  └─ ManagePage.jsx     # Enable / disable mobs
+│  │
+│  ├─ lib/
+│  │  ├─ time.js            # Respawn calculations
+│  │  ├─ spawnKey.js        # mobId__mapName keys
+│  │  └─ storage.js         # localStorage persistence
+│  │
+│  ├─ App.jsx
+│  ├─ main.jsx
+│  └─ index.css
+│
+├─ vite.config.js
+└─ package.json
+```
+## **Contact**
+For any questions or suggestions, feel free to contact me at:  
+hiramsanchez.dev@gmail.com  
