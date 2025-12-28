@@ -1,12 +1,19 @@
-import { formatHMS, msUntilReady } from "../lib/time";
+import { formatHMS, msUntilReady, msUntilRealReady } from "../lib/time";
 
 export default function MobCard({ item, onKill }) {
   const { mob, map, lastKillAt } = item;
-  const ms = msUntilReady(lastKillAt, map.respawnMinMinutes);
-  const ready = ms <= 0;
+  const msMin = msUntilReady(lastKillAt, map.respawnMinMinutes);
+  const msMax = msUntilRealReady(lastKillAt, map.respawnMaxMinutes);
+  const cooldown = msMin > 0;
+  const window = msMin <= 0 && msMax > 0;
+  const confirmed = msMax <= 0;
+
+  const statusClass = confirmed ? "ready" : window ? "window" : "";
+  const statusText = confirmed ? "READY" : window ? "POSSIBLE" : "Respawns in";
+  const timerText = cooldown ? formatHMS(msMin) : "00:00:00";
 
   return (
-    <div className={`card ${ready ? "ready" : ""}`}>
+    <div className={`card ${statusClass}`}>
       <div className="row space">
         <div className="row" style={{ gap: 10 }}>
           <div
@@ -78,9 +85,9 @@ export default function MobCard({ item, onKill }) {
         </div>
 
         <div style={{ textAlign: "right" }}>
-          <div className="small muted">{ready ? "READY" : "Respawns in"}</div>
+          <div className="small muted">{statusText}</div>
           <div className="timer" style={{ marginTop: 2 }}>
-            {ready ? "00:00:00" : formatHMS(ms)}
+            {timerText}
           </div>
           <button
             className="btn primary"

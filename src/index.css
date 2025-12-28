@@ -6,8 +6,9 @@
   --muted: #a8a8a8;
   --text: #f2f2f2;
   --border: #2a2a2a;
-  --ready: #2bd576;
+  --ready: rgba(43, 213, 118, .45);
   --warn: #f2c94c;
+  --mypurp: #6D248C;
 }
 
 * { box-sizing: border-box; }
@@ -85,8 +86,13 @@ a { color: inherit; }
 }
 
 .card.ready {
-  border-color: rgba(43, 213, 118, .45);
-  box-shadow: 0 0 0 1px rgba(43, 213, 118, .15) inset;
+  border-color: var(--ready);
+  box-shadow: 0 0 0 0.5px var(--ready);
+}
+
+.card.window {
+  border-color: var(--warn);
+  box-shadow: 0 0 0 0.5px var(--warn);
 }
 
 .small { font-size: 12px; }
