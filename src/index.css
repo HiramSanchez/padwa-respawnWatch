@@ -95,6 +95,40 @@ a { color: inherit; }
   box-shadow: 0 0 0 0.5px var(--warn);
 }
 
+.card.compact {
+  padding: 10px;
+}
+
+.card.compact .hr {
+  margin: 8px 0;
+}
+
+.card.compact .timer {
+  font-size: 16px;
+}
+
+/* Oculta la línea Map/Weakness en compacto */
+.card.compact .h2 {
+  display: none;
+}
+
+/* Baja un poco el botón en compacto */
+.card.compact .btn.primary {
+  padding: 6px 10px;
+}
+
+/* Hace la card más “bajita” en general */
+.card.compact .small {
+  line-height: 1.2;
+}
+
+.card.compact .compactLine {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 520px;
+}
+
 .small { font-size: 12px; }
 .h1 { font-size: 14px; font-weight: 700; margin: 0; }
 .h2 { font-size: 12px; margin: 0; color: var(--muted); }

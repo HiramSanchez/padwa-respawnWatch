@@ -1,6 +1,6 @@
 import { formatHMS, msUntilReady, msUntilRealReady } from "../lib/time";
 
-export default function MobCard({ item, onKill }) {
+export default function MobCard({ item, onKill, compact }) {
   const { mob, map, lastKillAt } = item;
   const msMin = msUntilReady(lastKillAt, map.respawnMinMinutes);
   const msMax = msUntilRealReady(lastKillAt, map.respawnMaxMinutes);
@@ -13,7 +13,7 @@ export default function MobCard({ item, onKill }) {
   const timerText = cooldown ? formatHMS(msMin) : "00:00:00";
 
   return (
-    <div className={`card ${statusClass}`}>
+    <div className={`card ${statusClass} ${compact ? "compact" : ""}`}>
       <div className="row space">
         <div className="row" style={{ gap: 10 }}>
           <div
@@ -71,23 +71,34 @@ export default function MobCard({ item, onKill }) {
 
       <div className="row space">
         <div style={{ minWidth: 0 }}>
-          <div className="small muted">Drops</div>
-          <div className="small" style={{ marginTop: 2 }}>
-            {mob.drops.join(", ")}
-          </div>
+          {compact ? (
+            <div className="small muted compactLine" style={{ marginTop: 2 }}>
+              {mob.drops?.length ? mob.drops.join(", ") : ""}
+              {mob.drops?.length ? " • " : ""}
+              {map.route}
+            </div>
+          ) : (
+            <>
+              <div className="small muted">Drops</div>
+              <div className="small" style={{ marginTop: 2 }}>
+                {mob.drops.join(", ")}
+              </div>
 
-          <div className="small muted" style={{ marginTop: 8 }}>
-            Route
-          </div>
-          <div className="small" style={{ marginTop: 2 }}>
-            {map.route}
-          </div>
+              <div className="small muted" style={{ marginTop: 8 }}>
+                Route
+              </div>
+              <div className="small" style={{ marginTop: 2 }}>
+                {map.route}
+              </div>
+            </>
+          )}
         </div>
-
         <div style={{ textAlign: "right" }}>
-          <div className="small muted">{statusText}</div>
+          <div className="small muted">
+            {compact ? "" : statusText}
+          </div>
           <div className="timer" style={{ marginTop: 2 }}>
-            {timerText}
+            {compact ? "" : timerText}
           </div>
           <button
             className="btn primary"
@@ -99,7 +110,7 @@ export default function MobCard({ item, onKill }) {
         </div>
       </div>
 
-      {lastKillAt && (
+      {!compact && lastKillAt && (
         <div className="small muted" style={{ marginTop: 10 }}>
           Last kill: {new Date(lastKillAt).toLocaleString()}
         </div>

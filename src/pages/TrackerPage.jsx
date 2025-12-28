@@ -2,7 +2,7 @@ import MobCard from "../components/MobCard";
 import { spawnKey } from "../lib/spawnKey";
 import { nowIso, msUntilReady } from "../lib/time";
 
-export default function TrackerPage({ catalog, state, setState, type }) {
+export default function TrackerPage({ catalog, state, setState, type, compact }) {
   // "cards" (mob + map)
   const all = [];
   for (const mob of catalog) {
@@ -56,6 +56,7 @@ export default function TrackerPage({ catalog, state, setState, type }) {
           <MobCard
             key={item.key}
             item={item}
+            compact={compact}
             onKill={() => markKilled(item.key,`${item.mob.name} — ${item.map.mapName}`)}
           />
         ))}
@@ -70,6 +71,7 @@ export default function TrackerPage({ catalog, state, setState, type }) {
           <MobCard
             key={item.key}
             item={item}
+            compact={compact}
             onKill={() => markKilled(item.key,`${item.mob.name} — ${item.map.mapName}`)}
           />
         ))}
