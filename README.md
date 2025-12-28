@@ -60,6 +60,12 @@ Timers are recalculated automatically even after restarting the app.
 
 ## **Screens**
 
+<img src="https://github.com/HiramSanchez/pacws-filesManager/blob/main/src/assets/ss/sspadwa01.png" width=400>
+
+<img src="https://github.com/HiramSanchez/pacws-filesManager/blob/main/src/assets/ss/sspadwa02.png" width=400>
+
+<img src="https://github.com/HiramSanchez/pacws-filesManager/blob/main/src/assets/ss/sspadwa03.png" width=400>
+
 ## **Project Structure**
 
 ```text
