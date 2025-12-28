@@ -12,6 +12,10 @@ export default function MobCard({ item, onKill, compact }) {
   const statusText = confirmed ? "READY" : window ? "POSSIBLE" : "Respawns in";
   const timerText = cooldown ? formatHMS(msMax) : "00:00:00";
 
+  const weakness = (mob.weakness ?? "na").toString().trim().toLowerCase();
+  const weaknessClass = `weak-${weakness.replace(/\s+/g, "-")}`;
+
+
   return (
     <div className={`card ${statusClass} ${compact ? "compact" : ""}`}>
       <div className="row space">
@@ -57,7 +61,7 @@ export default function MobCard({ item, onKill, compact }) {
               Map: <span style={{ color: "var(--text)" }}>{map.mapName}</span>
               {"  "}•{"  "}
               Weakness:{" "}
-              <span style={{ color: "var(--text)" }}>
+              <span className={`weakness ${weaknessClass}`}>
                 {mob.weakness ?? "N/A"}
               </span>
             </p>

@@ -8,8 +8,23 @@
   --border: #2a2a2a;
   --ready: rgba(43, 213, 118, .45);
   --warn: #f2c94c;
-  --mypurp: #6D248C;
 }
+
+.weakness {
+  font-weight: 600;
+}
+
+/* elements colors */
+.weak-fire { color: #da5b5b; }
+.weak-water { color: #59bcf9; }
+.weak-ghost { color: #ee63db;}
+.weak-shadow { color: #c08cff; }
+.weak-undead { color: #9aa7ff; }
+.weak-wind { color: #7CFFB2; }
+.weak-earth { color: #f2c94c; }
+.weak-holy { color: #ffffff; }
+.weak-poison { color: #f89659; }
+.weak-neutral { color: #a8a8a8; }
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
