@@ -4,6 +4,8 @@ import Tabs from "./components/Tabs";
 import TrackerPage from "./pages/TrackerPage";
 import ManagePage from "./pages/ManagePage";
 import { loadState, saveState } from "./lib/storage";
+import plusIcon from "./assets/icons/plus.svg";
+import minusIcon from "./assets/icons/minus.svg";
 
 export default function App() {
   const [tab, setTab] = useState("mvp");
@@ -42,20 +44,24 @@ export default function App() {
           title={title}
           right={
             <div className="row" style={{ gap: 8 }}>
+              <Tabs active={tab} onChange={setTab} />
               <button
-                className="btn"
+                className="btn iconBtn"
                 onClick={() =>
                   setState((prev) => ({
                     ...prev,
                     ui: { ...(prev.ui ?? {}), compact: !prev.ui?.compact },
                   }))
                 }
-                title="Toggle compact mode"
+                title={
+                  state.ui?.compact ? "Compact mode: ON" : "Compact mode: OFF"
+                }
               >
-                {state.ui?.compact ? "Compact: ON" : "Compact: OFF"}
+                <img
+                  src={state.ui?.compact ? plusIcon : minusIcon}
+                  alt={state.ui?.compact ? "Compact ON" : "Compact OFF"}
+                />
               </button>
-
-              <Tabs active={tab} onChange={setTab} />
             </div>
           }
         />
