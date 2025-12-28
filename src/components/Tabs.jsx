@@ -4,8 +4,8 @@ export default function Tabs({ active, onChange }) {
       className="btn"
       onClick={() => onChange(id)}
       style={{
-        background: active === id ? "#242424" : "#202020",
-        borderColor: active === id ? "#3a3a3a" : "var(--border)"
+        background: active === id ? "#6D248C" : "#202020",
+        borderColor: active === id ? "#6D248C"  : "var(--border)",
       }}
     >
       {label}
@@ -16,7 +16,7 @@ export default function Tabs({ active, onChange }) {
     <div className="row" style={{ gap: 8 }}>
       <Tab id="mvp" label="MVP" />
       <Tab id="miniboss" label="MiniBoss" />
-      <Tab id="manage" label="Manage" />
+      <Tab id="settings" label="Settings" />
     </div>
   );
 }

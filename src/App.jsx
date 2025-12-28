@@ -31,7 +31,7 @@ export default function App() {
   }, []);
 
   const title = useMemo(() => {
-    if (tab === "manage") return "Manage";
+    if (tab === "settings") return "Settings";
     return tab === "mvp" ? "MVP Tracker" : "MiniBoss Tracker";
   }, [tab]);
 
