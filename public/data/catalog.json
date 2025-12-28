@@ -21,6 +21,126 @@
       }
     ]
   },
+  { 
+    "mobId": "ungoliant",
+    "name": "Ungoliant",
+    "imgTag": "ungoliant",
+    "type": "miniboss",
+    "weakness": null,
+    "drops": ["Peridot"],
+    "maps": [
+      {
+        "mapName": "ein_dun01",
+        "route": "Go einbech dungeon",
+        "respawnMinMinutes": 60,
+        "respawnMaxMinutes": 110
+      },
+      {
+        "mapName": "beach_dun",
+        "route": "Go Comodo, left",
+        "respawnMinMinutes": 60,
+        "respawnMaxMinutes": 110
+      }
+    ]
+  },
+  { 
+    "mobId": "executioner",
+    "name": "Executioner",
+    "imgTag": "executioner",
+    "type": "miniboss",
+    "weakness": "Holy",
+    "drops": ["Bloody Edge","Phlogopite"],
+    "maps": [
+      {
+        "mapName": "gefenia03",
+        "route": "Go gefenia, follow the map",
+        "respawnMinMinutes": 180,
+        "respawnMaxMinutes": 300
+      },
+      {
+        "mapName": "magma_dun01",
+        "route": "Go Magma dungeon",
+        "respawnMinMinutes": 60,
+        "respawnMaxMinutes": 90
+      }
+    ]
+  },
+  { 
+    "mobId": "ogretooth",
+    "name": "Ogretooth",
+    "imgTag": "ogretooth",
+    "type": "miniboss",
+    "weakness": "Holy",
+    "drops": ["Old Hilt","Muscovite"],
+    "maps": [
+      {
+        "mapName": "anthell02",
+        "route": "Go anthell, follow the map",
+        "respawnMinMinutes": 120,
+        "respawnMaxMinutes": 180
+      },
+      {
+        "mapName": "gl_cas01",
+        "route": "",
+        "respawnMinMinutes": 120,
+        "respawnMaxMinutes": 180
+      }
+    ]
+  },
+  { 
+    "mobId": "mysteltainn",
+    "name": "Mysteltainn",
+    "imgTag": "mysteltainn",
+    "type": "miniboss",
+    "weakness": "Holy",
+    "drops": ["Biotite"],
+    "maps": [
+      {
+        "mapName": "gefenia01",
+        "route": "Go gefenia",
+        "respawnMinMinutes": 180,
+        "respawnMaxMinutes": 300
+      },
+            {
+        "mapName": "spl_fild03",
+        "route": "Go Splendide, follow the map",
+        "respawnMinMinutes": 180,
+        "respawnMaxMinutes": 300
+      }
+    ]
+  },
+  { 
+    "mobId": "zealotus",
+    "name": "Zealotus",
+    "imgTag": "zealotus",
+    "type": "miniboss",
+    "weakness": null,
+    "drops": ["Rose Quartz"],
+    "maps": [
+      {
+        "mapName": "spl_fild02",
+        "route": "Go Splendide, follow the map",
+        "respawnMinMinutes": 60,
+        "respawnMaxMinutes": 90
+      }
+    ]
+  },
+  { 
+    "mobId": "arcangeling",
+    "name": "Arc Angeling",
+    "imgTag": "arcangeling",
+    "type": "miniboss",
+    "weakness": "Shadow",
+    "drops": ["Agate","Turquoise"],
+    "maps": [
+      {
+        "mapName": "ra_fild04",
+        "route": "Go Ice dun, bottom x2",
+        "respawnMinMinutes": 60,
+        "respawnMaxMinutes": 90
+      }
+    ]
+  },
   {
     "mobId": "tao_gunka",
     "name": "Tao Gunka",
@@ -86,6 +206,22 @@
     ]
   },
   {
+    "mobId": "fallenBishop",
+    "name": "Fallen Bishop",
+    "imgTag": "fallenBishop",
+    "type": "mvp",
+    "weakness": "Holy",
+    "drops": ["Fallen Bishop Card"],
+    "maps": [
+      {
+        "mapName": "abbey02",
+        "route": "Cursed nameless island, center, right",
+        "respawnMinMinutes": 120,
+        "respawnMaxMinutes": 130
+      }
+    ]
+  },
+  {
     "mobId": "biolabMvp",
     "name": "Biolab MVP",
     "imgTag": "biolabMvp",
@@ -114,6 +250,102 @@
         "route": "Go odin temple, right, up-right",
         "respawnMinMinutes": 480,
         "respawnMaxMinutes": 490
+      }
+    ]
+  },
+  {
+    "mobId": "moonlightFlower",
+    "name": "Moonlight Flower",
+    "imgTag": "moonlightFlower",
+    "type": "mvp",
+    "weakness": "Water",
+    "drops": ["Moonlight Flower Card"],
+    "maps": [
+      {
+        "mapName": "pay_dun03",
+        "route": "Go payon dun, right x2, center, down",
+        "respawnMinMinutes": 60,
+        "respawnMaxMinutes": 70
+      }
+    ]
+  },
+  {
+    "mobId": "baphomet",
+    "name": "Baphomet",
+    "imgTag": "baphomet",
+    "type": "mvp",
+    "weakness": "Holy",
+    "drops": ["Baphomet Card"],
+    "maps": [
+      {
+        "mapName": "prt_maze03",
+        "route": "Go Hidden Temple, top-mid x2",
+        "respawnMinMinutes": 120,
+        "respawnMaxMinutes": 130
+      }
+    ]
+  },
+  {
+    "mobId": "ifrit",
+    "name": "Ifrit",
+    "imgTag": "ifrit",
+    "type": "mvp",
+    "weakness": "Water",
+    "drops": ["Ifrit Card"],
+    "maps": [
+      {
+        "mapName": "thor_v03",
+        "route": "Go thor, follow the map.",
+        "respawnMinMinutes": 660,
+        "respawnMaxMinutes": 670
+      }
+    ]
+  },
+  {
+    "mobId": "incantationSamurai",
+    "name": "Incantation Samurai",
+    "imgTag": "incantationSamurai",
+    "type": "mvp",
+    "weakness": "Holy",
+    "drops": ["Samurai Spector Card"],
+    "maps": [
+      {
+        "mapName": "ama_dun03",
+        "route": "Go amatsu, follow the map.",
+        "respawnMinMinutes": 91,
+        "respawnMaxMinutes": 101
+      }
+    ]
+  },
+  {
+    "mobId": "kiel",
+    "name": "Kiel D-01",
+    "imgTag": "kiel",
+    "type": "mvp",
+    "weakness": "Holy",
+    "drops": ["Kiel D-01 Card"],
+    "maps": [
+      {
+        "mapName": "kh_dun02",
+        "route": "Go kiel dun, top-left, not the corner",
+        "respawnMinMinutes": 120,
+        "respawnMaxMinutes": 180
+      }
+    ]
+  },
+  {
+    "mobId": "maya",
+    "name": "Maya",
+    "imgTag": "maya",
+    "type": "mvp",
+    "weakness": "Fire",
+    "drops": ["Maya Card"],
+    "maps": [
+      {
+        "mapName": "anthell02",
+        "route": "Go anthell, follow the map",
+        "respawnMinMinutes": 120,
+        "respawnMaxMinutes": 130
       }
     ]
   }
