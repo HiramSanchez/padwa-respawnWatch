@@ -6,7 +6,8 @@
   --muted: #a8a8a8;
   --text: #f2f2f2;
   --border: #2a2a2a;
-  --ready: rgba(43, 213, 118, .45);
+  --ready: #2a812a;
+  --active: #6D248C;
   --warn: #f2c94c;
 }
 
@@ -51,6 +52,7 @@ a { color: inherit; }
 }
 
 .row { display: flex; gap: 10px; align-items: center; }
+.row2 { display: flex; align-items: center; }
 .space { justify-content: space-between; }
 .muted { color: var(--muted); }
 
@@ -75,10 +77,8 @@ a { color: inherit; }
 }
 
 .badge {
-  border: 1px solid var(--border);
-  border-radius: 999px;
   padding: 4px 8px;
-  font-size: 12px;
+  font-weight: 600;
   color: var(--muted);
 }
 
@@ -122,10 +122,10 @@ a { color: inherit; }
   font-size: 16px;
 }
 
-/* Oculta la línea Map/Weakness en compacto 
-.card.compact .h2 {
+/*Oculta la línea Map/Weakness en compacto*/ 
+.card.compact .h2 .hideable {
   display: none;
-}*/
+}
 
 /* Baja un poco el botón en compacto */
 .card.compact .btn.primary {

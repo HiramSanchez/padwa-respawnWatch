@@ -54,15 +54,16 @@ export default function MobCard({ item, onKill, compact }) {
               }}
             />
           </div>
-
           <div>
             <p className="h1">{mob.name}</p>
             <p className="h2">
-              Map: <span style={{ color: "var(--text)" }}>{map.mapName}</span>
-              {"  "}•{"  "}
-              Weakness:{" "}
-              <span className={`weakness ${weaknessClass}`}>
-                {mob.weakness ?? "N/A"}
+                Map: <span style={{ color: "var(--text)" }}>{map.mapName}</span>
+              <span className="hideable">
+                {"  "}•{"  "}
+                Weakness:{" "}
+                <span className={`weakness ${weaknessClass}`}>
+                  {mob.weakness ?? "N/A"}
+                </span>
               </span>
             </p>
           </div>

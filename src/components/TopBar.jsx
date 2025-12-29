@@ -1,4 +1,6 @@
-export default function TopBar({ title, right }) {
+import logoIcon from "../assets/icons/duration.svg";
+
+export default function TopBar({ right }) {
   return (
     <div
       style={{
@@ -6,17 +8,21 @@ export default function TopBar({ title, right }) {
         borderBottom: "1px solid var(--border)",
       }}
     >
-      {/* Row 1: App name */}
-      <div className="row space">
-        <div className="badge" 
-             style={{ color: "var(--text)" }}>Respawn Watch</div>
-        <div />
-      </div>
 
-      {/* Row 2: Section title + tabs */}
+      {/* Row: tabs */}
       <div className="row space" style={{ marginTop: 6 }}>
-        <div className="muted small" style={{ paddingLeft: 12 }}>{title}</div>
-        <div className="row" style={{ gap: 8, paddingRight: 12  }}>
+        <div className="row" style={{ paddingLeft: 2 }}>
+          <div className="row2">
+            <div>
+              <img alt="logo" className="iconBtn badge" src={logoIcon} />
+            </div>
+            <div className="badge" style={{ color: "var(--text)" }}>
+              Respawn Watch
+            </div>
+            <div />
+          </div>
+        </div>
+        <div className="row" style={{ gap: 8, paddingRight: 4 }}>
           {right}
         </div>
       </div>

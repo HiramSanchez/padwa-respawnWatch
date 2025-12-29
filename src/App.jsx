@@ -32,16 +32,10 @@ export default function App() {
     return () => clearInterval(id);
   }, []);
 
-  const title = useMemo(() => {
-    if (tab === "settings") return "Settings";
-    return tab === "mvp" ? "MVP Tracker" : "MiniBoss Tracker";
-  }, [tab]);
-
   return (
     <div className="container">
       <div className="panel">
         <TopBar
-          title={title}
           right={
             <div className="row" style={{ gap: 8 }}>
               <Tabs active={tab} onChange={setTab} />
