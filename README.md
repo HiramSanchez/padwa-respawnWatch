@@ -55,7 +55,7 @@ Timers are recalculated automatically even after restarting the app.
 ### 🎮 Compact Mode (Farm Mode)
 - Toggle compact mode for intensive farming sessions
 
-### ⚙️ Settings Tab (Mob-Level Control)
+### ⚙️ Settings (Mob-Level Control)
 - Quickly Enable / disable only what you are farming today
 
 ## **Screens**

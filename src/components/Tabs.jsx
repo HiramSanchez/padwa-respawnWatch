@@ -6,8 +6,8 @@ export default function Tabs({ active, onChange }) {
       className={`btn ${icon ? "iconBtn" : ""}`}
       onClick={() => onChange(id)}
       style={{
-        background: active === id ? "var(--ready)" : "#202020",
-        borderColor: active === id ? "var(--ready)" : "var(--border)",
+        background: active === id ? "var(--bReady)" : "#202020",
+        borderColor: active === id ? "var(--bReady)" : "var(--border)",
       }}
       title={label}
     >
